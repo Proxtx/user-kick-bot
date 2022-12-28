@@ -1,0 +1,25 @@
+{
+  "name": "user-kick-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Proxtx/user-kick-bot.git"
+  },
+  "author": "Proxtx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Proxtx/user-kick-bot/issues"
+  },
+  "homepage": "https://github.com/Proxtx/user-kick-bot#readme",
+  "dependencies": {
+    "@proxtx/config": "^1.0.2",
+    "@proxtx/framework": "^1.5.8",
+    "discord.js": "^14.7.1"
+  }
+}
