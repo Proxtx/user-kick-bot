@@ -7,10 +7,10 @@ client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-export const kickUser = (pwd, gId, uId) => {
+export const kickUser = async (pwd, gId, uId) => {
   if (pwd != config.pwd) return;
   const Guild = client.guilds.cache.get(gId);
-  const Member = Guild.members.cache.get(uId);
+  const Member = await Guild.members.fetch(uId);
   Member.voice.disconnect();
 };
 
