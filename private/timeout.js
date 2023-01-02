@@ -1,7 +1,7 @@
-import { userTimeout } from "../public/bot.js";
+import { timeoutUser } from "../public/bot.js";
 
 export const server = async (document, options) => {
-  await userTimeout(
+  await timeoutUser(
     options.req.query.pwd,
     options.req.query.gId,
     options.req.query.uId,
