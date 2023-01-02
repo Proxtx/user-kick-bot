@@ -19,7 +19,7 @@ export const timeoutUser = async (pwd, gId, uId, duration) => {
   const Guild = client.guilds.cache.get(gId);
   const Member = await Guild.members.fetch(uId);
   try {
-    await Member.timeout(duration * 6000);
+    await Member.timeout(duration * 1000 * 60);
   } catch {
     console.log("failed to create timeout");
   }
