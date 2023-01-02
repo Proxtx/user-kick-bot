@@ -14,4 +14,15 @@ export const kickUser = async (pwd, gId, uId) => {
   Member.voice.disconnect();
 };
 
+export const timeoutUser = async (pwd, gId, uId, duration) => {
+  if (pwd != config.pwd) return;
+  const Guild = client.guilds.cache.get(gId);
+  const Member = await Guild.members.fetch(uId);
+  try {
+    await Member.timeout(duration * 6000);
+  } catch {
+    console.log("failed to create timeout");
+  }
+};
+
 client.login(config.token);
